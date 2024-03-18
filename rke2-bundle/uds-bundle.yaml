@@ -32,6 +32,20 @@ packages:
     optionalComponents:
       - git-server
 
+  - name: MetalLB
+    repository: ghcr.io/defenseunicorns/packages/metallb
+    ref: 0.0.5-skeleton
+    variables:
+      - name: ipAddressPool
+        default:  192.168.1.240-192.168.1.248
+      - name: ipAddressAdminIngressgateway
+        default: 192.168.1.240
+      - name: ipAddressKeycloakIngressgateway
+        default: 192.168.1.241
+      - name: ipAddressTenantIngressgateway
+        default: 192.168.1.242
+
+
   - name: UDS Core
     repository: ghcr.io/defenseunicorns/packages/uds/core
     ref: 0.16.1-upstream

@@ -1,0 +1,14 @@
+kind: UDSBundle
+metadata:
+  name: example
+  description: an example UDS bundle
+  version: 0.0.1
+
+package:
+  - name: Zarf Longhorn init
+    repository: ghcr.io/naps-dev/packages/init-longhorn
+    ref: v0.32.4
+
+  - name: UDS Core
+    repository: ghcr.io/defenseunicorns/packages/uds/core
+    ref: 0.16.1-upstream
